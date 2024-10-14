@@ -1,0 +1,129 @@
+/* Board.css */
+.board-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.row {
+  display: flex;
+  justify-content: center;
+  margin: 5px 0;
+}
+.square {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  font-size: 2rem;
+  text-align: center;
+  border: 2px solid white;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.square.x {
+  color: red;
+  font-weight: bolder;
+}
+.square.o {
+  color: green;
+  font-weight: bolder;
+}
+.btn {
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+.score-card {
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #e0e0e0;
+  border-radius: 20px;
+  text-align: center;
+}
+
+/* สำหรับหน้าจอขนาดใหญ่ (Desktop) */
+@media only screen and (min-width: 1024px) {
+  .board-container {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    transform: scale(1);/* ขนาดปกติ */
+  }
+  .board {
+    margin: 0 30px;
+  }
+  .score-card {
+    width: 180px;
+  }
+}
+/* สำหรับหน้าจอขนาดกลาง (Tablet) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .board-container {
+    width: 90%;
+    transform: scale(0.8);/* ลดขนาดลง 80% */
+  }
+  .board {
+    margin: 0 20px;
+  }
+  .score-card {
+    width: 400px;
+    margin-top: 20px;/* เพิ่ม margin ด้านล่าง */
+    margin-bottom: 20px;/* เพิ่ม margin ด้านล่าง */
+  }
+}
+/* สำหรับหน้าจอขนาดเล็ก (Mobile) */
+@media only screen and (max-width: 767px) {
+  .board-container {
+    width: 100%;
+    flex-direction: column;
+    transform: scale(0.6);/* ลดขนาดลง 60% */
+  }
+  .score-card {
+    width: 100%;
+    margin: 10px;
+  }
+}
+/* สำหรับหน้าจอขนาดเล็ก (320px - 480px) */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .board-container {
+    width: 100%;/* ใช้ความกว้างทั้งหมด */
+    flex-direction: column;/* จัดเรียงในแนวตั้ง */
+    align-items: center;/* จัดกึ่งกลางแนวนอน */
+    padding: 10px;/* เพิ่ม padding เล็กน้อย */
+    transform: scale(0.7);/* ลดขนาดลง 70% */
+  }
+  .board {
+    margin: 0;/* ไม่มี margin */
+  }
+  .row {
+    flex-direction: row;/* จัดเรียงในแนวนอน */
+    justify-content: center;/* จัดกลาง */
+  }
+  .square {
+    width: 70px;/* ขนาดสี่เหลี่ยมเล็กลง */
+    height: 70px;/* ขนาดสี่เหลี่ยมเล็กลง */
+    font-size: 1.5rem;/* ขนาดฟอนต์เล็กลง */
+    margin: 2px;/* ลด margin */
+  }
+  .score-card {
+    width: 90%;/* ใช้ความกว้าง 90% */
+    margin-top: 10px;/* เพิ่ม margin ด้านล่าง */
+    margin-bottom: 10px;/* เพิ่ม margin ด้านล่าง */
+  }
+  .btn {
+    padding: 8px 16px;/* ปรับขนาดปุ่ม */
+    font-size: 1rem;/* ขนาดฟอนต์ปุ่มเล็กลง */
+  }
+  h2 {
+    font-size: 1.5rem;/* ขนาดฟอนต์ของข้อความในกระดานเล็กลง */
+  }
+  h3 {
+    font-size: 1.2rem;/* ขนาดฟอนต์ของหัวข้อในการ์ดเล็กลง */
+  }
+}

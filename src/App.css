@@ -1,38 +1,47 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #f8f9fa; /* สีพื้นหลัง */
+  height: 100vh; /* ให้เต็มความสูงของหน้าจอ */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.board {
+  margin: 20px;
+  padding: 20px; /* เพิ่ม padding รอบกระดาน */
+  border: 5px solid #007bff; /* ขอบกระดานเป็นสีน้ำเงิน */
+  border-radius: 15px; /* ให้มุมกระดานโค้งมน */
+  background-color: #fff; /* สีพื้นหลังของกระดาน */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.row {
+  display: flex;
+  justify-content: center; /* จัดตำแหน่งช่องให้กลาง */
+}
+
+.square {
+  margin: 5px; /* เพิ่มระยะห่างระหว่างช่อง */
+  border-radius: 10px; /* ให้มุมช่องโค้งมน */
+  border: 10px solid #007bff; /* เพิ่มเส้นขอบสีน้ำเงิน */
+  background-color: #d0e9ff; /* สีพื้นหลังของช่อง */
+  width: 100px; /* กำหนดความกว้าง */
+  height: 100px; /* กำหนดความสูง */
+  font-size: 2rem; /* ขนาดตัวอักษร */
+  transition: background-color 0.3s; /* เอฟเฟกต์เมื่อมีการโฮเวอร์ */
+}
+
+.square:hover {
+  background-color: #b0d4ff; /* สีเมื่อโฮเวอร์ */
+}
+
+h2 {
+  color: #343a40; /* สีตัวอักษร */
+  margin-bottom: 20px;
+}
+
+.btn {
+  margin-top: 20px;
 }

@@ -1,0 +1,20 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* ให้เต็มความสูงของหน้าจอ */
+    background-color: #f8f9fa; /* สีพื้นหลัง */
+  }
+  
+  .game-title {
+    font-size: 4rem; /* ขนาดตัวอักษรใหญ่ */
+    color: #343a40; /* สีตัวอักษร */
+    margin-bottom: 20px; /* เพิ่มระยะห่างด้านล่าง */
+  }
+  
+  .start-button {
+    font-size: 2rem; /* ขนาดตัวอักษรของปุ่ม */
+    padding: 10px 20px; /* ขนาดของปุ่ม */
+  }
+  
